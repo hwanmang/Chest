@@ -52,7 +52,7 @@ def render_music_filter(username):
 
 @app.route("/iloveyou/<name>/")
 def iloveyou(name):
-    motto = f"{name}야 난 너뿐이야!"
+    motto = f"{name}야 난 너뿐이야!!"
 
     context = {
         'name': name,
