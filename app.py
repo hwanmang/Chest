@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import random
+import sqlite3
 
 app = Flask(__name__)
 
