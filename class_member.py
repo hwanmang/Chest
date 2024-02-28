@@ -20,9 +20,9 @@ class Post:
 
 members = []
 member_list = [
-    Member("김땡땡", "tom111", "password111"),
-    Member("이머머", "kim222", "password222"),
-    Member("박누구", "lee333", "password333")
+    Member("김땡땡", "kim111", "password111"),
+    Member("이머머", "lee222", "password222"),
+    Member("정누구", "jung333", "password333")
 ]
 
 for member in member_list:
