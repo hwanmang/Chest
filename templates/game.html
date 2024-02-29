@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock_paper_scissors_game</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .start {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hand_choice {
+            font-size: 50px;
+        }
+
+        .gameflow {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .gameflowbox {
+            background-color: beige;
+            border-radius: 5px;
+            width: 60px;
+            height: 30px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>가위바위보 게임을 해보자!</h1>
+    <h2>무엇을 선택하실 건가요?</h2>
+
+    <div class="start">
+        <form action="/game/play" method="post">
+            <input type="hidden" name="choice" value="가위">
+            <button type="submit" class="hand_choice">✌️</button>
+        </form>
+        <form action="/game/play" method="post">
+            <input type="hidden" name="choice" value="바위">
+            <button type="submit" class="hand_choice">✊</button>
+        </form>
+        <form action="/game/play" method="post">
+            <input type="hidden" name="choice" value="보">
+            <button type="submit" class="hand_choice">✋</button>
+        </form>
+    </div>
+    <h1>게임 결과</h1>
+
+    <div class="result">
+        <h2>당신의 선택: {{ choice }}</h2>
+        <h2>컴퓨터의 선택: {{ computer_choice }}</h2>
+        <h2>게임 결과: {{ result }}</h2>
+
+        <h3>사용자 승리: {{ game_flow.user_win }}</h3>
+        <h3>무승부: {{ game_flow.draw }}</h3>
+        <h3>컴퓨터 승리: {{ game_flow.computer_win }}</h3>
+    </div>
+
+</body>
+
+</html>
