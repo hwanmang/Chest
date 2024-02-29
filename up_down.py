@@ -27,19 +27,13 @@ def up_down():
                 print(f"정답입니다! {random_number}이었습니다.")
                 print(f"시도 횟수: {step}")
 
-        while True:
-            play_again = input("다시 하시겠습니까? (y/n): ")
-            if play_again.lower() == "y":
-                print(f"이전 게임 플레이어 최고 시도 횟수: {step}")
-                break
-            elif play_again.lower() == "n":
-                break
-            else:
-                print("유효한 입력이 아닙니다.")
-                continue
-
-        if play_again.lower() == "n":
-            print("게임을 종료합니다")
+        play_again = input("다시 하시겠습니까? (y/n): ")
+        if play_again.lower() == "y":
+            print(f"이전 게임 플레이어 최고 시도 횟수: {step}")
+            continue
+        elif play_again.lower() == "n":
+            break
+        else:
             break
 
 

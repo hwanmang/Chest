@@ -28,17 +28,12 @@ def play_game():
             print("컴퓨터 승리!")
             computer_win += 1
 
-        while True:
-            play_again = input("다시 하시겠습니까? (y/n): ")
-            if play_again.lower() == "y":
-                break
-            elif play_again.lower() == "n":
-                break
-            else:
-                print("유효한 입력이 아닙니다.")
-                continue
-
-        if play_again.lower() == "n":
+        play_again = input("다시 하시겠습니까? (y/n): ")
+        if play_again.lower() == "y":
+            continue
+        elif play_again.lower() == "n":
+            break
+        else:
             break
 
     print("게임 종료")
