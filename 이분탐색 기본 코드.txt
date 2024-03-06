@@ -1,0 +1,21 @@
+이분탐색 기본 코드
+
+def binary_search(arr, value):
+    first, last = 0, len(arr)
+
+    while first <= last:
+        mid = (first + last) // 2
+        if arr[mid] == value:
+            return mid
+        if arr[mid] > value:
+            last = mid - 1
+        else:
+            first = mid + 1
+k, n = map(int, input().split())
+
+아래 둘은 같음
+# lan = []
+# for _ in range(k):
+#     lan.append(int(input()))
+
+lan = [int(input()) for _ in range(k)]
