@@ -1,11 +1,23 @@
 from collections import deque
 
 N = int(input())
-deque = deque([i for i in range(1, N+1)])
+queue = deque([i for i in range(1, N+1)])
 
-while (len(deque) > 1):
-    deque.popleft()
-    card = deque.popleft()
-    deque.append(card)
+while (len(queue) > 1):
+    queue.popleft()
+    card = queue.popleft()
+    queue.append(card)
 
-print(deque[0])
+print(queue[0])
+
+
+# from collections import deque
+
+# N = int(input())
+# queue = deque(range(1, N + 1))
+
+# while len(queue) > 1:
+#     queue.popleft()
+#     queue.append(queue.popleft())
+
+# print(queue[0])

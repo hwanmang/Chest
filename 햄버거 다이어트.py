@@ -1,23 +1,19 @@
-def dfs(L, sum, lim):
-    global res
-    if L == n:  # 모두 돌았음 종료조건
-        # if lim > limit:
-        #     return
-        if sum > res:
-            res = sum
-    else:   # 현재 재료 먹냐 안 먹냐.
-        if lim + data[L][1] <= limit:
-            dfs(L+1, sum + data[L][0], lim + data[L][1])
-        dfs(L+1, sum, lim)
+def dfs(start, score, calorie):
+    global best
+    if calorie > L:
+        return
+    if calorie <= L:
+        if best < score:
+            best = score
+    for j in range(start, N):
+        dfs(j+1, score + food[j][0], calorie+food[j][1])
 
 
 T = int(input())
-for t in range(T):
-    n, limit = map(int, input().split())
-    data = []
-    for _ in range(n):
-        a, b = map(int, input().split())  # 점수, 칼로리
-        data.append((a, b))  # 점수, 칼로리
-    res = 0
+for test_case in range(1, T + 1):
+    N, L = map(int, input().split())  # N:재료수 L:제한 칼로리
+    food = [list(map(int, input().split())) for _ in range(N)]
+    # start, 칼로리, 만족도
+    best = 0
     dfs(0, 0, 0)
-    print(f"#{t+1} {res}")
+    print(f'#{test_case} {best}')
