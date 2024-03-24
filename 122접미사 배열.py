@@ -1,13 +1,5 @@
-def solution(binomial):
-    a, op, b = binomial.split()
-    a = int(a)
-    b = int(b)
-
-    if op == '+':
-        result = a + b
-    elif op == '-':
-        result = a - b
-    elif op == '*':
-        result = a * b
-
-    return result
+def solution(my_string):
+    answer = []
+    for i in range(len(my_string)):
+        answer.append(my_string[i:])
+    return sorted(answer)

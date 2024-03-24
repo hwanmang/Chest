@@ -1,6 +1,6 @@
-def solution(strArr):
+def solution(my_string):
     answer = []
-    for i in strArr:
-        if "ad" not in i:
-            answer.append(i)
-    return answer
+    for i in my_string:
+        if i.isdigit():
+            answer.append(int(i))
+    return sorted(answer)

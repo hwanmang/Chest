@@ -1,6 +1,8 @@
-def solution(strArr):
-    answer = []
-    for i in strArr:
-        if "ad" not in i:
-            answer.append(i)
-    return answer
+def solution(myString):
+    result = ''
+    for char in myString:
+        if char < 'l':
+            result += 'l'
+        else:
+            result += char
+    return result

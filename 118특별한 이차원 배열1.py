@@ -1,6 +1,6 @@
-def solution(strArr):
-    answer = []
-    for i in strArr:
-        if "ad" not in i:
-            answer.append(i)
-    return answer
+def solution(arr):
+    for i in range(len(arr)):
+        for j in range(len(arr[i])):
+            if arr[i][j] != arr[j][i]:
+                return 0
+    return 1
